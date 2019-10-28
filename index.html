@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+            /* overflow: hidden; */
+        }
+        </style>
+    </head>
+    <body>
+        <!-- @grid是切成幾分 10/1000總共 10*10分 整塊doodle的大小是1000*1000
+            1x10 /500px   300px  total1*10  整塊doodle的大小是5-->
+        <!-- :doodle內是整塊css-doodle的樣式
+            :doodle外是每格grid的樣式 
+        @rand(最小,最大) 隨機取數字-->
+        <!-- <css-doodle>
+        :doodle { 
+            background:black; 
+            @grid: 5 / 100vmax;
+            } 
+            @shape: whale;
+            background: rgb(@rand(100, 255), @rand(100, 255), @rand(100, 255)); 
+            transition: opacity .5s; 
+            transform: scale( @rand(0.5, 1) ) rotate( @rand(0, 360)deg );
+            @place-cell: @rand(0, 100)% -20%;
+            animation-name: ani;
+            animation-duration: 5s; 
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; 
+            animation-delay: @rand(0,5)s ;
+            @keyframes ani {
+                0% { 
+                    top:-20%; 
+                } 
+                100% {
+                    top:120%; 
+                } 
+             }
+        </css-doodle>
+      -->
+      <script src="./css-doodle.min.js"></script>
+      <css-doodle grid="35x1">
+            :doodle {
+              grid-row-gap: 2px;
+              <!-- width: 8em; height: 50em; -->
+              @size: 8em;
+            }
+            background: #60569e;
+            width: @rand(5%, 100%);
+          </css-doodle>
+
+
+
+        
+    </body>
+    </html>
